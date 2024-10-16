@@ -16,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (DialogueController.Instance != null && DialogueController.Instance.isDialogOn)
+        {
+            return;
+        }
+
         float move = Input.GetAxis("Horizontal");
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
