@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Unity.UIElements;
 
 public class Inventory : MonoBehaviour
 {
+    public Canvas UIinventory;
+
+    public TextMeshPro prefabText;
+    public GameObject panelParent;
+
     private List<GameObject> inventoryList = new List<GameObject>();
 
     private bool isPlayerPressingLeftClick = false;
@@ -12,6 +19,9 @@ public class Inventory : MonoBehaviour
     {
         if (collision.CompareTag("TakeObject") && isPlayerPressingLeftClick)
         {
+            UIinventory.gameObject.SetActive(true);
+            TextMeshPro instancePrefabText = Instantiate(prefabText);
+            instancePrefabText.transform.parent = panelParent.transform;
             inventoryList.Add(collision.gameObject);
 
             Destroy(collision.gameObject);
