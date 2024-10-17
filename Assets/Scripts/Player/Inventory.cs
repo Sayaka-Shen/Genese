@@ -6,18 +6,17 @@ using Unity.UIElements;
 
 public class Inventory : MonoBehaviour
 {
-    public Canvas UIinventory;
+    [Header("UI")]
+    [SerializeField] private Canvas UIinventory;
+    [SerializeField] private TMP_Text prefabText;
+    [SerializeField] private GameObject panelParent;
 
-    public TMP_Text prefabText;
-    public GameObject panelParent;
 
     private List<GameObject> inventoryList = new List<GameObject>();
 
-    private bool isPlayerPressingLeftClick = false;
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("TakeObject") && isPlayerPressingLeftClick)
+        if (collision.CompareTag("TakeObject") && Input.GetMouseButtonDown(0))
         {
             UIinventory.gameObject.SetActive(true);
 
@@ -27,31 +26,10 @@ public class Inventory : MonoBehaviour
 
             instancePrefabText.SetText(inventoryList[0].name);
 
-            if(collision.gameObject != null)
+            if (collision.gameObject != null)
             {
                 Destroy(collision.gameObject);
             }
-        }
-        else
-        {
-            Resetpopup();
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            isPlayerPressingLeftClick = true;
-            Debug.Log("L'objet à été récupérer");
-        }
-    }
-    private void Resetpopup()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            isPlayerPressingLeftClick = false;
-            Debug.Log("L'objet est au sol");
         }
     }
 }
