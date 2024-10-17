@@ -20,11 +20,17 @@ public class Inventory : MonoBehaviour
         if (collision.CompareTag("TakeObject") && isPlayerPressingLeftClick)
         {
             UIinventory.gameObject.SetActive(true);
+
             TMP_Text instancePrefabText = Instantiate(prefabText);
             instancePrefabText.transform.SetParent(panelParent.transform, false);
             inventoryList.Add(collision.gameObject);
 
-            Destroy(collision.gameObject);
+            instancePrefabText.SetText(inventoryList[0].name);
+
+            if(collision.gameObject != null)
+            {
+                Destroy(collision.gameObject);
+            }
         }
         else
         {
