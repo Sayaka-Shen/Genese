@@ -1480,7 +1480,7 @@ GameObject:
   - component: {fileID: 1480299346}
   - component: {fileID: 1480299345}
   m_Layer: 0
-  m_Name: Connard
+  m_Name: epe
   m_TagString: TakeObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
