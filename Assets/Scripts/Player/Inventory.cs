@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
 {
     public Canvas UIinventory;
 
-    public TextMeshPro prefabText;
+    public TMP_Text prefabText;
     public GameObject panelParent;
 
     private List<GameObject> inventoryList = new List<GameObject>();
@@ -20,11 +20,21 @@ public class Inventory : MonoBehaviour
         if (collision.CompareTag("TakeObject") && isPlayerPressingLeftClick)
         {
             UIinventory.gameObject.SetActive(true);
-            TextMeshPro instancePrefabText = Instantiate(prefabText);
-            instancePrefabText.transform.parent = panelParent.transform;
+
+            TMP_Text instancePrefabText = Instantiate(prefabText);
+            instancePrefabText.transform.SetParent(panelParent.transform, false);
             inventoryList.Add(collision.gameObject);
 
-            Destroy(collision.gameObject);
+            instancePrefabText.SetText(inventoryList[0].name);
+
+            if(collision.gameObject != null)
+            {
+                Destroy(collision.gameObject);
+            }
+        }
+        else
+        {
+            Resetpopup();
         }
     }
 
@@ -35,10 +45,13 @@ public class Inventory : MonoBehaviour
             isPlayerPressingLeftClick = true;
             Debug.Log("L'objet à été récupérer");
         }
-        else
+    }
+    private void Resetpopup()
+    {
+        if (Input.GetMouseButtonUp(0))
         {
             isPlayerPressingLeftClick = false;
+            Debug.Log("L'objet est au sol");
         }
     }
-
 }
