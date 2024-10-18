@@ -36,9 +36,10 @@ public class CollisionNPC : MonoBehaviour
             {
                 canvas.gameObject.SetActive(true);
                 DialogueController.Instance.InitDialog(currentDialog.GetData(idSentence), currentDialog);
+                playerInteraction.ResetInteractionState();
             }
 
-            if(playerInteraction.CompareTag("LeBon"))
+            if (playerInteraction.CompareTag("LeBon"))
             {
                 indexDialogBon++;
             }

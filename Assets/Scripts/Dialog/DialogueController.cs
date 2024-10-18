@@ -69,12 +69,12 @@ public class DialogueController : MonoBehaviour
 
             if (choiceInstance.TryGetComponent<Button>(out var button))
             {
+                Debug.Log("oui");
                 if (choice.IDChoice.ToLower() == "c_ok" || choice.IDChoice.ToLower() == "c_close")
                 {
                     button.onClick.AddListener(() => 
                     {
                         canvas.gameObject.SetActive(false); 
-                        playerInteraction.ResetInteractionState();
                         isDialogOn = false;
                     });
                 }
