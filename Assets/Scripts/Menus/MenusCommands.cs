@@ -13,6 +13,7 @@ public class MenusCommands : MonoBehaviour
     public void PlayGame()
     {
         mainMenu.gameObject.SetActive(false);
+        AudioManager.Instance.PlayMusic("Game_Music");
     }
 
     public void QuitGame()
