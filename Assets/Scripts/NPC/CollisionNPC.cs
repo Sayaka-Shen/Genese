@@ -9,6 +9,25 @@ public class CollisionNPC : MonoBehaviour
     [SerializeField] private string idSentence;
     [SerializeField] private Canvas canvas;
 
+    private int indexDialogBon = 0;
+    public int IndexDialogBon
+    {
+        get { return indexDialogBon; }
+    }
+
+    private int indexDialogBrute = 0;
+    public int IndexDialogBrute
+    {
+        get { return indexDialogBrute; }
+    }
+
+    private int indexDialogDonJuan = 0;
+    public int IndexDialogDonJuan
+    {
+        get { return indexDialogDonJuan; }
+    }
+
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.TryGetComponent(out PlayerInteraction playerInteraction))
@@ -17,6 +36,21 @@ public class CollisionNPC : MonoBehaviour
             {
                 canvas.gameObject.SetActive(true);
                 DialogueController.Instance.InitDialog(currentDialog.GetData(idSentence), currentDialog);
+            }
+
+            if(playerInteraction.CompareTag("LeBon"))
+            {
+                indexDialogBon++;
+            }
+
+            if (playerInteraction.CompareTag("LaBrute"))
+            {
+                indexDialogBrute++;
+            }
+
+            if (playerInteraction.CompareTag("LeDonJuan"))
+            {
+                indexDialogDonJuan++;
             }
         }
     }
