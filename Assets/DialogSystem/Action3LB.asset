@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22a84082e438024b8703c49c5da3950, type: 3}
+  m_Name: Action3LB
+  m_EditorClassIdentifier: 
+  dialogDatas:
+  - Id: A3LBD1
+    speekerName: 
+    sentence: "Ces combats me fatigue. Je CASSE. Je brise. Mais je les encha\xEEnes...
+      Je donnerais mon tout pour mon peuple mais dit moi... Toi qui est d'ici, qui
+      me conseilles-tu de pourfendre?"
+    choices:
+    - IDChoice: bon
+      IDDialog: A3LBD1_1
+    - IDChoice: don
+      IDDialog: A3LBD1_2
+    - IDChoice: brute
+      IDDialog: A3LBD1_3
+  - Id: A3LBD1_1
+    speekerName: 
+    sentence: La chance n'a pas de valeur. SEUL LE MUSCLE PREVAUT!
+    choices:
+    - IDChoice: continue
+      IDDialog: A3LBD1_1_1
+  - Id: A3LBD1_1_1
+    speekerName: 
+    sentence: "*Le chevalier rit \xE0 pleine voix de sa voix rocailleuse*"
+    choices:
+    - IDChoice: continue
+      IDDialog: A3LBD1_1_2
+  - Id: A3LBD1_1_2
+    speekerName: 
+    sentence: Je le briserais.
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: A3LBD1_2
+    speekerName: 
+    sentence: Je ne connais pas les faibles. Son nom m'est inconnue. BAH! Le Cogner
+      ne sera pas satisfaisant!
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: A3LBD1_3
+    speekerName: 
+    sentence: '*La voix du chevalier de vient encore plus caverneuse*'
+    choices:
+    - IDChoice: continue
+      IDDialog: A3LBD1_3_1
+  - Id: A3LBD1_3_1
+    speekerName: 
+    sentence: "TU ME DEFIE \xC9CUYER?"
+    choices:
+    - IDChoice: gloups
+      IDDialog: A3LBD1_3_2
+  - Id: A3LBD1_3_2
+    speekerName: 
+    sentence: "BA-HA-HA-HA-HAAH, j'aime bien ton panache petit, mais j'ai besoin
+      d'une r\xE9el proposition. Je risquerait de me battre."
+    choices:
+    - IDChoice: bon
+      IDDialog: A3LBD1_1
+    - IDChoice: don
+      IDDialog: A3LBD1_2
+  choiceDatas:
+  - Id: continue
+    label: "[\xC9couter]"
+  - Id: C_OK
+    label: '[Partir]'
+  - Id: bon
+    label: Le bon et sa stupide chance
+  - Id: don
+    label: Don Juan et son stupide sourire
+  - Id: brute
+    label: La brute, je peux pas le voir
+  - Id: gloups
+    label: '*Gloups*'
