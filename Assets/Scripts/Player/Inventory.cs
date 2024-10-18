@@ -6,39 +6,30 @@ using Unity.UIElements;
 
 public class Inventory : MonoBehaviour
 {
-    public Canvas UIinventory;
+    [Header("UI")]
+    [SerializeField] private Canvas UIinventory;
+    [SerializeField] private TMP_Text prefabText;
+    [SerializeField] private GameObject panelParent;
 
-    public TextMeshPro prefabText;
-    public GameObject panelParent;
 
     private List<GameObject> inventoryList = new List<GameObject>();
 
-    private bool isPlayerPressingLeftClick = false;
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("TakeObject") && isPlayerPressingLeftClick)
+        if (collision.CompareTag("TakeObject") && Input.GetMouseButtonDown(0))
         {
             UIinventory.gameObject.SetActive(true);
-            TextMeshPro instancePrefabText = Instantiate(prefabText);
-            instancePrefabText.transform.parent = panelParent.transform;
+
+            TMP_Text instancePrefabText = Instantiate(prefabText);
+            instancePrefabText.transform.SetParent(panelParent.transform, false);
             inventoryList.Add(collision.gameObject);
 
-            Destroy(collision.gameObject);
+            instancePrefabText.SetText(inventoryList[0].name);
+
+            if (collision.gameObject != null)
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            isPlayerPressingLeftClick = true;
-            Debug.Log("L'objet à été récupérer");
-        }
-        else
-        {
-            isPlayerPressingLeftClick = false;
-        }
-    }
-
 }
