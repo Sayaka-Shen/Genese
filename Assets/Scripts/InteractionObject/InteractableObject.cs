@@ -10,6 +10,17 @@ public class InteractableObject : MonoBehaviour
 
     [Header("NPC")]
     [SerializeField] private CollisionNPC collisionNPC;
+    public CollisionNPC CollisionNPC
+    {
+        get { return collisionNPC; }
+    }
+
+    [Header("UI Interaction")]
+    [SerializeField] private Canvas interactionMenu; 
+    public Canvas InteractioMenu
+    {
+        get { return interactionMenu; }
+    }
 
     private bool isUnlocked = false;
     public bool IsUnlocked { get { return isUnlocked; } }
@@ -18,5 +29,11 @@ public class InteractableObject : MonoBehaviour
     {
         isUnlocked = true;
         collisionNPC.SetNextDialog(nextDialog, nextIdSentence);
+    }
+
+    public IEnumerator WaitBeforeClosingInteractionMenu()
+    {
+        yield return new WaitForSeconds(2f);
+        interactionMenu.gameObject.SetActive(false);
     }
 }

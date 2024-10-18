@@ -74,7 +74,6 @@ public class DialogueController : MonoBehaviour
                     button.onClick.AddListener(() => 
                     {
                         canvas.gameObject.SetActive(false); 
-                        playerInteraction.ResetInteractionState();
                         isDialogOn = false;
                     });
                 }

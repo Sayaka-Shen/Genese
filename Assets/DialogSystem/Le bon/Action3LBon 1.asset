@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22a84082e438024b8703c49c5da3950, type: 3}
+  m_Name: Action3LBon 1
+  m_EditorClassIdentifier: 
+  dialogDatas:
+  - Id: A3LBonD1
+    speekerName: 
+    sentence: "*Un noble de la foule derri\xE8re vous:*\n*\"LE BON! LE BON!\"*"
+    choices:
+    - IDChoice: continue
+      IDDialog: A3LBonD2
+  - Id: A3LBonD2
+    speekerName: 
+    sentence: Mon bon roi 1er, puisse un jour ne jamais tomber en duel contre vous...
+      Vous savez quoi? je pense que je vais abandonner par respect pour mes adversaires.
+    choices:
+    - IDChoice: detourne
+      IDDialog: A3LBonD2_1
+    - IDChoice: beat
+      IDDialog: A3LBonD2_2
+  - Id: A3LBonD2_1
+    speekerName: 
+    sentence: Vous m'avez convaincus, je participerais!
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: A3LBonD2_2
+    speekerName: 
+    sentence: Je ne participerais donc qu'entant que spectateur.
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  choiceDatas:
+  - Id: continue
+    label: "[\xC9couter]"
+  - Id: C_OK
+    label: '[Partir]'
+  - Id: detourne
+    label: "Ne laissez pas votre destin vous m\xE8tres en d\xE9route!"
+  - Id: beat
+    label: "*contempler son monologue b\xE9at*"
