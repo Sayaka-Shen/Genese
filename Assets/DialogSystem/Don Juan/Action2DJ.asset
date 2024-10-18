@@ -45,7 +45,7 @@ MonoBehaviour:
       pour lui rajouter du d\xE9fit \xE7a devrait \xEAtre int\xE9ressant. Enfin!
       \xC7a n'est qu'une suggestion mi amigo."
     choices:
-    - IDChoice: C_OK2
+    - IDChoice: C_OK
       IDDialog: 
   choiceDatas:
   - Id: continue

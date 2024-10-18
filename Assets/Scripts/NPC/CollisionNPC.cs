@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class CollisionNPC : MonoBehaviour
@@ -8,6 +9,7 @@ public class CollisionNPC : MonoBehaviour
     [SerializeField] private DialogDatabase currentDialog;
     [SerializeField] private string idSentence;
     [SerializeField] private Canvas canvas;
+
 
     private void OnTriggerStay2D(Collider2D other)
     {

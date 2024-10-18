@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A1LBonD1
-    speekerName: 
+    speekerName: Le Bon
     sentence: "*Un chevalier \xE0 l'armure saillante attends, ses mains reposant
       sur sa lance et \xE0 la fois pos\xE9es sur son menton*"
     choices:
@@ -23,44 +23,44 @@ MonoBehaviour:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A1LBonD2
-    speekerName: 
+    speekerName: Le Bon
     sentence: '*soupire*'
     choices:
     - IDChoice: chevalier
       IDDialog: A1LBonD3
   - Id: A1LBonD3
-    speekerName: 
+    speekerName: Le Bon
     sentence: '*soupiir*'
     choices:
     - IDChoice: armes
       IDDialog: A1LBonD4
   - Id: A1LBonD4
-    speekerName: 
+    speekerName: Le Bon
     sentence: '*soupiiire*'
     choices:
     - IDChoice: duels
       IDDialog: A1LBonD5
   - Id: A1LBonD5
-    speekerName: 
+    speekerName: Le Bon
     sentence: "Meuouih je suis au courant. Je me suis d\xE9j\xE0 pr\xE9par\xE9 en
       cons\xE9quence. "
     choices:
     - IDChoice: continue
       IDDialog: A1LBonD6
   - Id: A1LBonD6
-    speekerName: 
+    speekerName: Le Bon
     sentence: "*Un noble de la foule derri\xE8re vous:*\n\"MAIS, c'est Le bon regardez!\""
     choices:
     - IDChoice: continue
       IDDialog: A1LBonD7
   - Id: A1LBonD7
-    speekerName: 
+    speekerName: Le Bon
     sentence: '*soupire*'
     choices:
     - IDChoice: bien
       IDDialog: A1LBonD8
   - Id: A1LBonD8
-    speekerName: 
+    speekerName: Le Bon
     sentence: "Allez plut\xF4t caresser mon cheval je crois qu'il s'agite *soupire*
       allez lui donner du courage quoi."
     choices:

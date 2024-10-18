@@ -21,11 +21,25 @@ public class PlayerInteraction : MonoBehaviour
         {
             isPlayerPressingI = true;
         }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            ResetInteractionStateE();
+        }
+
+        if (Input.GetKeyUp(KeyCode.I))
+        {
+            ResetInteractionStateI();
+        }
     }
 
-    public void ResetInteractionState()
+    public void ResetInteractionStateE()
     {
         isPlayerPressingE = false;
+    }
+
+    public void ResetInteractionStateI()
+    {
         isPlayerPressingI = false;
     }
 }

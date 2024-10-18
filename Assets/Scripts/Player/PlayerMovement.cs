@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float playerspeed = 3f;
     [SerializeField] private float sprintMultiplier = 2f;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private SpriteRenderer playerSpriteRenderer;
 
     private Rigidbody2D rb;
 
@@ -30,9 +32,27 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(move * playerspeed, rb.velocity.y);
 
+        if(move != 0 && playerAnimator != null)
+        {
+            playerAnimator.SetBool("IsPlayerWalking", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("IsPlayerWalking", false);
+        }
+
         if (move == 0)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        if(move < 0)
+        {
+            playerSpriteRenderer.flipX = true;
+        }
+        else
+        {
+            playerSpriteRenderer.flipX = false;
         }
     }
 }
