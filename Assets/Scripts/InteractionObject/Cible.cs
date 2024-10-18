@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Cible : InteractableObject
@@ -10,10 +11,10 @@ public class Cible : InteractableObject
         {
             if (playerInteraction.IsPlayerPressingI)
             {
-                if (CollisionNPC.IndexDialogBon != 2)
-                {
-                    return;
-                }
+                InteractioMenu.gameObject.SetActive(true);
+                InteractioMenu.GetComponent<TMP_Text>().text = "La cible encourage Le Bon....";
+
+                StartCoroutine(WaitBeforeClosingInteractionMenu());
 
                 UnlockDialog();
             }

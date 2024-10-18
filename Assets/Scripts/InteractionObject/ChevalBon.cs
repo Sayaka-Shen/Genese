@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ChevalBon : InteractableObject
@@ -10,10 +11,10 @@ public class ChevalBon : InteractableObject
         {
             if (playerInteraction.IsPlayerPressingI)
             {
-                if (CollisionNPC.IndexDialogBon != 1)
-                {
-                    return;
-                }
+                InteractioMenu.gameObject.SetActive(true);
+                InteractioMenu.GetComponentInChildren<TMP_Text>().text = "L'Ecuyer caresse le cheval...";
+                
+                StartCoroutine(WaitBeforeClosingInteractionMenu());
 
                 UnlockDialog();
             }
