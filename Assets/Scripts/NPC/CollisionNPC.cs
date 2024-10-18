@@ -10,7 +10,12 @@ public class CollisionNPC : MonoBehaviour
     [SerializeField] private string idSentence;
     [SerializeField] private Canvas canvas;
 
+    public int iterationCount = 0;
 
+    /// <summary>
+    /// Merci Emile !!!!
+    /// </summary>
+    /// <param name="other">un truc là</param>
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.TryGetComponent(out PlayerInteraction playerInteraction))
@@ -19,8 +24,25 @@ public class CollisionNPC : MonoBehaviour
             {
                 canvas.gameObject.SetActive(true);
                 DialogueController.Instance.InitDialog(currentDialog.GetData(idSentence), currentDialog);
+                playerInteraction.ResetInteractionStateE();
+
+                iterationCount++;
             }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out PlayerInteraction playerInteraction))
+        {
+            playerInteraction.ResetInteractionStateE();
+            playerInteraction.ResetInteractionStateI();
+        }
+    }
+
+    private void Update()
+    {
+        Debug.Log(iterationCount);
     }
 
     public void SetNextDialog(DialogDatabase newDialog, string newIdSentence)
