@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Epee : MonoBehaviour
+public class Epee : InteractableObject
 {
     // Start is called before the first frame update
     void Start()
