@@ -10,6 +10,11 @@ public class ChevalBon : InteractableObject
         {
             if (playerInteraction.IsPlayerPressingI)
             {
+                if (CollisionNPC.IndexDialogBon != 1)
+                {
+                    return;
+                }
+
                 UnlockDialog();
             }
         }

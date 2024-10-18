@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cible : MonoBehaviour
+public class Cible : InteractableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
-    }
+        if (other.TryGetComponent(out PlayerInteraction playerInteraction))
+        {
+            if (playerInteraction.IsPlayerPressingI)
+            {
+                if (CollisionNPC.IndexDialogBon != 2)
+                {
+                    return;
+                }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+                UnlockDialog();
+            }
+        }
     }
 }

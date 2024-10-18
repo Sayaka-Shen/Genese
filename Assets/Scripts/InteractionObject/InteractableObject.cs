@@ -11,6 +11,11 @@ public class InteractableObject : MonoBehaviour
     [Header("NPC")]
     [SerializeField] private CollisionNPC collisionNPC;
 
+    public CollisionNPC CollisionNPC
+    {
+        get { return collisionNPC; }
+    }
+
     private bool isUnlocked = false;
     public bool IsUnlocked { get { return isUnlocked; } }
 
