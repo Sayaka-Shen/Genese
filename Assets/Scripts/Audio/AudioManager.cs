@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        
+        PlayMusic("Main_Menu");
     }
 
     #region Play manager
