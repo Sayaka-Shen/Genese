@@ -31,9 +31,6 @@ public class PlayerInteraction : MonoBehaviour
         {
             ResetInteractionStateI();
         }
-
-        Debug.Log(isPlayerPressingE);
-        Debug.Log(isPlayerPressingI);
     }
 
     public void ResetInteractionStateE()
