@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22a84082e438024b8703c49c5da3950, type: 3}
+  m_Name: Action1LB
+  m_EditorClassIdentifier: 
+  dialogDatas:
+  - Id: A1LBD1
+    speekerName: 
+    sentence: "*Le golgoth au casque encore mouchet\xE9 de gouttelettes de bi\xE8res
+      est entrain de s'essuyer la visi\xE8res vous regardant d'un regard assassin
+      une fois sa main pass\xE9e*"
+    choices:
+    - IDChoice: continue
+      IDDialog: A1LBD2
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: A1LBD2
+    speekerName: 
+    sentence: "BEUH quesque c'est que \xC7'NABOT. Tu cognes? Tu frappes? Je vais
+      pas rester ici \xE0 rien faire!"
+    choices:
+    - IDChoice: jesuisyoutuber
+      IDDialog: A1LBD2_1
+    - IDChoice: vosarmes
+      IDDialog: A1LBD2_1
+  - Id: A1LBD2_1
+    speekerName: 
+    sentence: "ET-TU OSES TE PRESENTER DEVANT MOI PETITE \xC9CUELLE?! Vous inviter
+      vos CHEVALIER sans BUFFET?!"
+    choices:
+    - IDChoice: continue
+      IDDialog: A1LBD2_2
+    - IDChoice: please
+      IDDialog: A1LBD2_2
+  - Id: A1LBD2_2
+    speekerName: 
+    sentence: ALORS, laisse moi te dire. DE LA VENAISON! J'aaaaai faim! Rapporte
+      m'en en tu veux!
+    choices:
+    - IDChoice: continue
+      IDDialog: A1LBD2_3
+    - IDChoice: please
+      IDDialog: A1LBD2_3
+  - Id: A1LBD2_2
+    speekerName: 
+    sentence: "PAR MON KILT! Mon \xE9p\xE9e... Petite \xE9cuelle, ELLE EST \xC9MOUSS\xC9E!
+      Je t'engage entant qu'\xE9cuyer. Vas \xE0 la meule. Et rapporte la moi."
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  choiceDatas:
+  - Id: continue
+    label: "[\xC9couter]"
+  - Id: C_OK
+    label: '[Partir]'
+  - Id: jesuisyoutuber
+    label: "Je suis \xE9cuyer."
+  - Id: vosarmes
+    label: "Vos armes messire\u2026 Le duel vas bient\xF4t commencer."
+  - Id: please
+    label: Monsieur s'il vou-
+  - Id: jesuisyoutuber2
+    label: "Je suis \xE9cuyer pa-"

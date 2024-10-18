@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22a84082e438024b8703c49c5da3950, type: 3}
+  m_Name: DialogTest1
+  m_EditorClassIdentifier: 
+  dialogDatas:
+  - Id: DialogNPC1
+    speekerName: Le DonJuan
+    sentence: Bonjour, comment allez-vous ?
+    choices:
+    - IDChoice: C_GOOD
+      IDDialog: DialogNPC1Part1
+    - IDChoice: C_NOTGOOD
+      IDDialog: DialogNPC1Part2
+  - Id: DialogNPC1Part2
+    speekerName: Le DonJuan
+    sentence: "Et bien j'esp\xE8re que votre journ\xE9e se passera bien !"
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: DialogNPC1Part1
+    speekerName: Le DonJuan
+    sentence: "Bien j'esp\xE8re que votre journ\xE9e continuera ainsi !"
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  choiceDatas:
+  - Id: C_GOOD
+    label: Cela va bien merci ?
+  - Id: C_NOTGOOD
+    label: Cela ne va pas sir !
+  - Id: C_OK
+    label: Merci

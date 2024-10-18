@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22a84082e438024b8703c49c5da3950, type: 3}
+  m_Name: DailogTest2
+  m_EditorClassIdentifier: 
+  dialogDatas:
+  - Id: DialogNPC2
+    speekerName: La Brute
+    sentence: "Bonjour sir, je me sens stress\xE9 \xE0 l'arriv\xE9 de cette joute."
+    choices:
+    - IDChoice: C_NORMAL
+      IDDialog: DialogNPCPart2
+    - IDChoice: C_NOTNORMAL
+      IDDialog: DialogNPCPart1
+  - Id: DialogNPCPart2
+    speekerName: La Brute
+    sentence: "Vous avez raison ! Aidez moi \xE0 saboter le cheval du DonJuan !"
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: DialogNPCPart1
+    speekerName: La Brute
+    sentence: "Mon stresse peut \xEAtre g\xE9rer en sabotant le cheval du DonJuan
+      ! Allez y !"
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  choiceDatas:
+  - Id: C_NORMAL
+    label: Cela est normal..
+  - Id: C_NOTNORMAL
+    label: Cela est pas normal..
+  - Id: C_OK
+    label: D'accord
