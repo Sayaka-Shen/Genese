@@ -519,6 +519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerspeed: 5
   sprintMultiplier: 2
+  playerAnimator: {fileID: 1464785730}
+  playerSpriteRenderer: {fileID: 1464785728}
 --- !u!114 &166485614
 MonoBehaviour:
   m_ObjectHideFlags: 0
