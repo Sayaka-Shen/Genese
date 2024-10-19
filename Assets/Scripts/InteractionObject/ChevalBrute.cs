@@ -13,7 +13,7 @@ public class ChevalBrute : InteractableObject
             {
                 InteractioMenu.gameObject.SetActive(true);
                 InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer sabote le cheval de La Brute...";
-
+                AudioManager.Instance.PlaySFX("Horse");
                 StartCoroutine(WaitBeforeClosingInteractionMenu());
 
                 UnlockDialog();

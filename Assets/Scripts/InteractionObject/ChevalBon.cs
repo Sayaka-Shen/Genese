@@ -13,8 +13,8 @@ public class ChevalBon : InteractableObject
             {
                 InteractioMenu.gameObject.SetActive(true);
                 InteractioMenu.GetComponentInChildren<TMP_Text>().text = "L'Ecuyer caresse le cheval...";
+                AudioManager.Instance.PlaySFX("Horse");
                 StartCoroutine(WaitBeforeClosingInteractionMenu());
-                playerInteraction.ResetInteractionStateI(); 
 
                 UnlockDialog();
             }

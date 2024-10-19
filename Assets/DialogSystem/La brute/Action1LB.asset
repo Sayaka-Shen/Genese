@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A1LBD1
-    speekerName: 
+    speekerName: La Brute
     sentence: "*Le golgoth au casque encore mouchet\xE9 de gouttelettes de bi\xE8res
       est entrain de s'essuyer la visi\xE8res vous regardant d'un regard assassin
       une fois sa main pass\xE9e*"
@@ -24,7 +24,7 @@ MonoBehaviour:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A1LBD2
-    speekerName: 
+    speekerName: La Brute
     sentence: "BEUH quesque c'est que \xC7'NABOT. Tu cognes? Tu frappes? Je vais
       pas rester ici \xE0 rien faire!"
     choices:
@@ -33,7 +33,7 @@ MonoBehaviour:
     - IDChoice: vosarmes
       IDDialog: A1LBD2_1
   - Id: A1LBD2_1
-    speekerName: 
+    speekerName: La Brute
     sentence: "ET-TU OSES TE PRESENTER DEVANT MOI PETITE \xC9CUELLE?! Vous inviter
       vos CHEVALIER sans BUFFET?!"
     choices:
@@ -42,7 +42,7 @@ MonoBehaviour:
     - IDChoice: please
       IDDialog: A1LBD2_2
   - Id: A1LBD2_2
-    speekerName: 
+    speekerName: La Brute
     sentence: ALORS, laisse moi te dire. DE LA VENAISON! J'aaaaai faim! Rapporte
       m'en en tu veux!
     choices:
@@ -50,8 +50,8 @@ MonoBehaviour:
       IDDialog: A1LBD2_3
     - IDChoice: please
       IDDialog: A1LBD2_3
-  - Id: A1LBD2_2
-    speekerName: 
+  - Id: A1LBD2_3
+    speekerName: La Brute
     sentence: "PAR MON KILT! Mon \xE9p\xE9e... Petite \xE9cuelle, ELLE EST \xC9MOUSS\xC9E!
       Je t'engage entant qu'\xE9cuyer. Vas \xE0 la meule. Et rapporte la moi."
     choices:

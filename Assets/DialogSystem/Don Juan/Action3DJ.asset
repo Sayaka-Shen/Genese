@@ -14,56 +14,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A3DJD1
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: Ah sous-fifre, c'est toi? Que veux-tu?
     choices:
     - IDChoice: C_OK
-      IDDialog: 
+      IDDialog: Le Donjuan
     - IDChoice: sabote
       IDDialog: A3DJD2
   - Id: A3DJD2
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Yo-ohoh~ Ne dites pas \xE7a malandrin! Il n\xE8 s'agit la qu\xE8 d'un
       \xE9quilibrage. Y\xE8 trinque... non Trinquons \xE0 mon illustre victoire!"
     choices:
     - IDChoice: continue
       IDDialog: A3DJD3
   - Id: A3DJD3
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Entant qu\xE8 h\xE9ro y\xE8 prot\xE9gerais ainsi mon commerce et s\xE9curiserait
       un meilleur avenir au marchand de l'est."
     choices:
     - IDChoice: continue
       IDDialog: A3DJD4
   - Id: A3DJD4
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: Viendra le jour ou les cul-terreux n'envieront plus les rois mah les
       marchands!
     choices:
     - IDChoice: continue
       IDDialog: A3DJD5
   - Id: A3DJD5
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Aurevoir Fran\xE7ois 1er & Henry VIII bonjour \xE9cus d\xE8 l'est."
     choices:
     - IDChoice: continue
       IDDialog: A3DJD6
   - Id: A3DJD6
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Y\xE8 t'inviterais nous ferons d\xE8 bonnes affaires, que dirait tu
       d'\xEAtre un vagabond des grands chemin travaillant pour moi."
     choices:
     - IDChoice: continue
       IDDialog: A3DJD7
   - Id: A3DJD7
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Bah tu t\xE8 d\xE9cidera vite d\xE8 toute mani\xE8re apr\xE8s avoir
       vue mon all\xE9gresse dans la joute!"
     choices:
     - IDChoice: continue
       IDDialog: A3DJD8
   - Id: A3DJD8
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: A la victoire!
     choices:
     - IDChoice: C_OK

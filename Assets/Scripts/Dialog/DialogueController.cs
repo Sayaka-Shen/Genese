@@ -12,6 +12,7 @@ public class DialogueController : MonoBehaviour
 
     [Header("Infos")] 
     [SerializeField] private TMP_Text txtInfo;
+    [SerializeField] private TMP_Text speakerInfo; 
     [SerializeField] private Canvas canvas;
 
     [Header("Choices")] 
@@ -56,6 +57,7 @@ public class DialogueController : MonoBehaviour
         
         isDialogOn = true;
         txtInfo.text = data.sentence;
+        speakerInfo.text = data.speekerName;
         InitChoices(data, dialogDatabase);
     }
 

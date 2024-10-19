@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A3LBD1
-    speekerName: 
+    speekerName: La Brute
     sentence: "Ces combats me fatigue. Je CASSE. Je brise. Mais je les encha\xEEnes...
       Je donnerais mon tout pour mon peuple mais dit moi... Toi qui est d'ici, qui
       me conseilles-tu de pourfendre?"
@@ -26,44 +26,44 @@ MonoBehaviour:
     - IDChoice: brute
       IDDialog: A3LBD1_3
   - Id: A3LBD1_1
-    speekerName: 
+    speekerName: La Brute
     sentence: La chance n'a pas de valeur. SEUL LE MUSCLE PREVAUT!
     choices:
     - IDChoice: continue
       IDDialog: A3LBD1_1_1
   - Id: A3LBD1_1_1
-    speekerName: 
+    speekerName: La Brute
     sentence: "*Le chevalier rit \xE0 pleine voix de sa voix rocailleuse*"
     choices:
     - IDChoice: continue
       IDDialog: A3LBD1_1_2
   - Id: A3LBD1_1_2
-    speekerName: 
+    speekerName: La Brute
     sentence: Je le briserais.
     choices:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A3LBD1_2
-    speekerName: 
+    speekerName: La Brute
     sentence: Je ne connais pas les faibles. Son nom m'est inconnue. BAH! Le Cogner
       ne sera pas satisfaisant!
     choices:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A3LBD1_3
-    speekerName: 
+    speekerName: La Brute
     sentence: '*La voix du chevalier de vient encore plus caverneuse*'
     choices:
     - IDChoice: continue
       IDDialog: A3LBD1_3_1
   - Id: A3LBD1_3_1
-    speekerName: 
+    speekerName: La Brute
     sentence: "TU ME DEFIE \xC9CUYER?"
     choices:
     - IDChoice: gloups
       IDDialog: A3LBD1_3_2
   - Id: A3LBD1_3_2
-    speekerName: 
+    speekerName: La Brute
     sentence: "BA-HA-HA-HA-HAAH, j'aime bien ton panache petit, mais j'ai besoin
       d'une r\xE9el proposition. Je risquerait de me battre."
     choices:
