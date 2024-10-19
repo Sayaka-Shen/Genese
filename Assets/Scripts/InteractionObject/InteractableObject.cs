@@ -18,7 +18,6 @@ public class InteractableObject : MonoBehaviour
     [Header("UI Interaction")]
     [SerializeField] private Canvas interactionMenu;
 
-
     public Canvas InteractioMenu
     {
         get { return interactionMenu; }

@@ -12,20 +12,43 @@ public class Inventory : MonoBehaviour
     [SerializeField] private TMP_Text prefabText;
     [SerializeField] private GameObject panelParent;
 
+    [SerializeField] private CollisionNPC collisionNPC;
+    private InteractableObject interactableObject;
+
     private List<GameObject> inventoryList = new List<GameObject>();
+
+    private void Awake()
+    {
+        interactableObject = FindAnyObjectByType<InteractableObject>();
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("TakeObject") && Input.GetMouseButtonDown(0))
         {
-            UIinventory.gameObject.SetActive(true);
+            if(collision.gameObject.name == "Epee" && collisionNPC.iterationCount != 1)
+            {
+                return;
+            } 
+            else
+            {
+                interactableObject.InteractioMenu.gameObject.SetActive(true);
+                interactableObject.InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer récupère l'Epée...";
+                AudioManager.Instance.PlaySFX("epee");
 
-            TMP_Text instancePrefabText = Instantiate(prefabText);
-            instancePrefabText.transform.SetParent(panelParent.transform, false);
+                StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
+                
+            }
+
+            UIinventory.gameObject.SetActive(true);
             inventoryList.Add(collision.gameObject);
 
-
-            instancePrefabText.SetText(inventoryList[0].name);
+            foreach (GameObject item in inventoryList)
+            {
+                TMP_Text instancePrefabText = Instantiate(prefabText);
+                instancePrefabText.transform.SetParent(panelParent.transform, false);
+                instancePrefabText.SetText(item.name);
+            }
 
             if (collision.gameObject != null)
             {

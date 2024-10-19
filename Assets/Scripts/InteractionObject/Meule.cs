@@ -13,6 +13,7 @@ public class Meule : InteractableObject
             {
                 InteractioMenu.gameObject.SetActive(true);
                 InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer polit l'épée...";
+                AudioManager.Instance.PlaySFX("Meule");
 
                 StartCoroutine(WaitBeforeClosingInteractionMenu());
 
