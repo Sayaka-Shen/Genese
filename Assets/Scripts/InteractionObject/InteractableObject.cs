@@ -17,6 +17,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("UI Interaction")]
     [SerializeField] private Canvas interactionMenu;
+    public bool isInteractionMenuOpen;
 
     public Canvas InteractioMenu
     {
@@ -43,7 +44,7 @@ public class InteractableObject : MonoBehaviour
 
     public IEnumerator WaitBeforeClosingInteractionMenu()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         interactionMenu.gameObject.SetActive(false);
     }
 }

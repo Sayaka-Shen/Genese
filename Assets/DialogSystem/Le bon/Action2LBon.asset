@@ -18,7 +18,7 @@ MonoBehaviour:
     sentence: "*Un noble de la foule derri\xE8re vous:*\n*\"LE BON! LE BON!\"*"
     choices:
     - IDChoice: continue
-      IDDialog: 
+      IDDialog: A2LBonD2
   - Id: A2LBonD2
     speekerName: Le Bon
     sentence: "Ne payez pas attentions, ils m'acclament \xE0 cause des derniers tournois...

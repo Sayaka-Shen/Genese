@@ -9,10 +9,11 @@ public class ChevalBrute : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
-            if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 2)
+            if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 2 && !isInteractionMenuOpen)
             {
+                isInteractionMenuOpen = true;
                 InteractioMenu.gameObject.SetActive(true);
-                InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer sabote le cheval de La Brute...";
+                GameManager.Instance.StartTypeWriter("L'Ecuyer sabote le cheval de La Brute...", InteractioMenu.GetComponentInChildren<TMP_Text>());
                 AudioManager.Instance.PlaySFX("Horse");
                 StartCoroutine(WaitBeforeClosingInteractionMenu());
 

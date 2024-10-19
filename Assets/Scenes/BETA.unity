@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 138097877}
   - component: {fileID: 138097878}
   - component: {fileID: 138097879}
+  - component: {fileID: 138097880}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -668,6 +669,7 @@ MonoBehaviour:
   nextIdSentence: A2DJD1
   collisionNPC: {fileID: 967120969}
   interactionMenu: {fileID: 2111735531}
+  isInteractionMenuOpen: 0
   inventory: {fileID: 166485614}
 --- !u!114 &138097879
 MonoBehaviour:
@@ -685,7 +687,21 @@ MonoBehaviour:
   nextIdSentence: A3LBD1
   collisionNPC: {fileID: 100920043}
   interactionMenu: {fileID: 2111735531}
+  isInteractionMenuOpen: 0
   inventory: {fileID: 166485614}
+--- !u!114 &138097880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138097875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b1994fa0d3c7d458f462664019d538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typingSpeed: 0.04
 --- !u!1 &155526674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,6 +5227,7 @@ MonoBehaviour:
   nextIdSentence: A2LBonD1
   collisionNPC: {fileID: 31120873}
   interactionMenu: {fileID: 2111735531}
+  isInteractionMenuOpen: 0
 --- !u!61 &420441387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7671,6 +7688,7 @@ MonoBehaviour:
   nextIdSentence: A3LBonD1
   collisionNPC: {fileID: 31120873}
   interactionMenu: {fileID: 2111735531}
+  isInteractionMenuOpen: 0
 --- !u!1 &754253723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8255,7 +8273,6 @@ MonoBehaviour:
   choicesParent: {fileID: 1148503252}
   choicePrefab: {fileID: 2901910954390571389, guid: 4415c638abee4e34cbccc5c3fba452d5, type: 3}
   playerInteraction: {fileID: 166485612}
-  isDialogOn: 0
 --- !u!1 &824315796
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,6 +8624,7 @@ MonoBehaviour:
   nextIdSentence: A2LBD1
   collisionNPC: {fileID: 100920043}
   interactionMenu: {fileID: 2111735531}
+  isInteractionMenuOpen: 0
 --- !u!1 &862202762
 GameObject:
   m_ObjectHideFlags: 0
@@ -11648,6 +11666,7 @@ MonoBehaviour:
   nextIdSentence: A3DJD1
   collisionNPC: {fileID: 967120969}
   interactionMenu: {fileID: 2111735531}
+  isInteractionMenuOpen: 0
 --- !u!1 &1416557489
 GameObject:
   m_ObjectHideFlags: 0

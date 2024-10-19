@@ -9,10 +9,11 @@ public class SetLanceDialog : InteractableObject
 
     private void Update()
     {
-        if (inventory.IsInventoryContaining("lance1") && CollisionNPC.iterationCount == 2)
+        if (inventory.IsInventoryContaining("lance1") && CollisionNPC.iterationCount == 2 && !isInteractionMenuOpen)
         {
+            isInteractionMenuOpen = true;
             InteractioMenu.gameObject.SetActive(true);
-            InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer récupère la lance...";
+            GameManager.Instance.StartTypeWriter("L'Ecuyer récupère la lance...", InteractioMenu.GetComponentInChildren<TMP_Text>());
 
             StartCoroutine(WaitBeforeClosingInteractionMenu());
 

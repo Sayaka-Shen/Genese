@@ -9,11 +9,12 @@ public class Cible : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
-            if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 2)
+            if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 2 && !isInteractionMenuOpen)
             {
+                isInteractionMenuOpen = true;
                 InteractioMenu.gameObject.SetActive(true);
-                InteractioMenu.GetComponent<TMP_Text>().text = "La cible encourage Le Bon....";
-
+                GameManager.Instance.StartTypeWriter("La cible encourage Le Bon....", InteractioMenu.GetComponentInChildren<TMP_Text>());
+                
                 StartCoroutine(WaitBeforeClosingInteractionMenu());
 
                 UnlockDialog();

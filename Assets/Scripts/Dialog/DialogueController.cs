@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +8,7 @@ public class DialogueController : MonoBehaviour
 {
     public static DialogueController Instance { get; private set; }
 
-    [Header("Infos")] 
+    [Header("Infos")]
     [SerializeField] private TMP_Text txtInfo;
     [SerializeField] private TMP_Text speakerInfo; 
     [SerializeField] private Canvas canvas;
@@ -22,7 +20,12 @@ public class DialogueController : MonoBehaviour
     [Header("Player Infos")]
     [SerializeField] private PlayerInteraction playerInteraction;
 
-    public bool isDialogOn;
+    private bool isDialogOn;
+    public bool IsDialogOn
+    {
+        get { return isDialogOn; }
+        set { isDialogOn = value; }
+    }
   
     private void Awake()
     {
@@ -56,8 +59,9 @@ public class DialogueController : MonoBehaviour
             return;
         
         isDialogOn = true;
-        txtInfo.text = data.sentence;
         speakerInfo.text = data.speekerName;
+        GameManager.Instance.StartTypeWriter(data.sentence, txtInfo);
+
         InitChoices(data, dialogDatabase);
     }
 

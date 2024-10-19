@@ -9,10 +9,11 @@ public class Meule : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
-            if (playerInteraction.IsPlayerPressingI && playerInteraction.GetComponent<Inventory>().IsInventoryContaining("Epee") && CollisionNPC.iterationCount == 1)
+            if (playerInteraction.IsPlayerPressingI && playerInteraction.GetComponent<Inventory>().IsInventoryContaining("Epee") && CollisionNPC.iterationCount == 1 && !isInteractionMenuOpen)
             {
+                isInteractionMenuOpen = true;
                 InteractioMenu.gameObject.SetActive(true);
-                InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer polit l'épée...";
+                GameManager.Instance.StartTypeWriter("L'Ecuyer polit l'épée...", InteractioMenu.GetComponentInChildren<TMP_Text>());
                 AudioManager.Instance.PlaySFX("Meule");
 
                 StartCoroutine(WaitBeforeClosingInteractionMenu());

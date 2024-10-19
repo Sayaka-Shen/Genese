@@ -10,10 +10,11 @@ public class SetBotteDialog : InteractableObject
 
     private void Update()
     {
-        if(inventory.IsInventoryContaining("Bottes1") && CollisionNPC.iterationCount == 1)
+        if(inventory.IsInventoryContaining("Bottes1") && CollisionNPC.iterationCount == 1 && !isInteractionMenuOpen)
         {
+            isInteractionMenuOpen = true;
             InteractioMenu.gameObject.SetActive(true);
-            InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer récupère les bottes...";
+            GameManager.Instance.StartTypeWriter("L'Ecuyer récupère les bottes...", InteractioMenu.GetComponentInChildren<TMP_Text>());
 
             StartCoroutine(WaitBeforeClosingInteractionMenu());
 

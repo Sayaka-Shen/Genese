@@ -26,14 +26,15 @@ public class Inventory : MonoBehaviour
     {
         if (collision.CompareTag("TakeObject") && Input.GetMouseButtonDown(0))
         {
-            if(collision.gameObject.name == "Epee" && collisionNPC.iterationCount != 1)
+            if(collision.gameObject.name == "Epee" && collisionNPC.iterationCount != 1 && interactableObject.isInteractionMenuOpen)
             {
                 return;
             } 
             else
             {
+                interactableObject.isInteractionMenuOpen = true;
                 interactableObject.InteractioMenu.gameObject.SetActive(true);
-                interactableObject.InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer récupère l'Epée...";
+                GameManager.Instance.StartTypeWriter("L'Ecuyer récupère l'Epée...", interactableObject.InteractioMenu.GetComponentInChildren<TMP_Text>());
                 AudioManager.Instance.PlaySFX("epee");
 
                 StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
