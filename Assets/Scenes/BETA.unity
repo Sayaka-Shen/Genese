@@ -613,6 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138097876}
   - component: {fileID: 138097877}
+  - component: {fileID: 138097878}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -650,6 +651,23 @@ MonoBehaviour:
   mainMenu: {fileID: 155526677}
   pauseMenu: {fileID: 114673229}
   settingsMenu: {fileID: 960710805}
+--- !u!114 &138097878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138097875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4656becf2bc38a24e8dbc213b30089cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextDialog: {fileID: 11400000, guid: c890dd7a575466d4cb1823fbe985730d, type: 2}
+  nextIdSentence: A2DJD1
+  collisionNPC: {fileID: 967120969}
+  interactionMenu: {fileID: 2111735531}
+  inventory: {fileID: 166485614}
 --- !u!1 &155526674
 GameObject:
   m_ObjectHideFlags: 0
@@ -8563,10 +8581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd48592a4375dc84d92d6b8944b04029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextDialog: {fileID: 0}
-  nextIdSentence: 
-  collisionNPC: {fileID: 0}
-  interactionMenu: {fileID: 0}
+  nextDialog: {fileID: 11400000, guid: 07e13228a85a8c64294c98098aa7bdcf, type: 2}
+  nextIdSentence: A2LBD1
+  collisionNPC: {fileID: 100920043}
+  interactionMenu: {fileID: 2111735531}
 --- !u!1 &862202762
 GameObject:
   m_ObjectHideFlags: 0
@@ -9189,6 +9207,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &967120969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1006587078246209262, guid: 2f179175a221f814996f13f6da31e8ed, type: 3}
+  m_PrefabInstance: {fileID: 967120965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a5510e46f21724bb8608ca87847238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1037443359
 GameObject:
   m_ObjectHideFlags: 0
@@ -11305,8 +11334,8 @@ GameObject:
   - component: {fileID: 1377678428}
   - component: {fileID: 1377678427}
   - component: {fileID: 1377678429}
-  - component: {fileID: 1377678430}
   - component: {fileID: 1377678431}
+  - component: {fileID: 1377678432}
   m_Layer: 0
   m_Name: Cheval_LaBrute
   m_TagString: Untagged
@@ -11426,22 +11455,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5189075, y: 2.2431498}
   m_EdgeRadius: 0
---- !u!114 &1377678430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377678426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c100fe9edf7d1f647b15d9e730ab46c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextDialog: {fileID: 11400000, guid: 9631d61212826f245805e178ef6208e0, type: 2}
-  nextIdSentence: DialogNPC2Part3
-  collisionNPC: {fileID: 100920043}
-  interactionMenu: {fileID: 0}
 --- !u!95 &1377678431
 Animator:
   serializedVersion: 5
@@ -11463,6 +11476,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1377678432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377678426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49db9b78d6299614da7af4e4641dc18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextDialog: {fileID: 11400000, guid: d0232d5d06963f94f8911d785fb34cb1, type: 2}
+  nextIdSentence: A3DJD1
+  collisionNPC: {fileID: 967120969}
+  interactionMenu: {fileID: 2111735531}
 --- !u!1 &1416557489
 GameObject:
   m_ObjectHideFlags: 0
@@ -11474,10 +11503,9 @@ GameObject:
   - component: {fileID: 1416557490}
   - component: {fileID: 1416557491}
   - component: {fileID: 1416557493}
-  - component: {fileID: 1416557494}
   m_Layer: 0
   m_Name: Bottes1
-  m_TagString: Untagged
+  m_TagString: TakeObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11594,22 +11622,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.56300545, y: 0.4436736}
   m_EdgeRadius: 0
---- !u!114 &1416557494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416557489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57a1cd62c1d6cd42a13fbf93ce755ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextDialog: {fileID: 0}
-  nextIdSentence: 
-  collisionNPC: {fileID: 0}
-  interactionMenu: {fileID: 0}
 --- !u!1 &1441587804
 GameObject:
   m_ObjectHideFlags: 0
@@ -12001,7 +12013,6 @@ GameObject:
   - component: {fileID: 1480299347}
   - component: {fileID: 1480299346}
   - component: {fileID: 1480299345}
-  - component: {fileID: 1480299349}
   m_Layer: 0
   m_Name: Epee
   m_TagString: TakeObject
@@ -12121,22 +12132,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1612417387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1480299349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480299344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a63ba99fab2c7e45bc2d89cdc8a61f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextDialog: {fileID: 0}
-  nextIdSentence: 
-  collisionNPC: {fileID: 0}
-  interactionMenu: {fileID: 0}
 --- !u!1 &1557624841
 GameObject:
   m_ObjectHideFlags: 0
@@ -15414,10 +15409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4f15c8fed6af145bc9e121311adc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextDialog: {fileID: 0}
-  nextIdSentence: 
-  collisionNPC: {fileID: 0}
-  interactionMenu: {fileID: 0}
+  nextDialog: {fileID: 11400000, guid: eb53e424ada55284fabf8e06fbae7b0b, type: 2}
+  nextIdSentence: A3LBD1
+  collisionNPC: {fileID: 100920043}
+  interactionMenu: {fileID: 2111735531}
 --- !u!1 &2058294066
 GameObject:
   m_ObjectHideFlags: 0

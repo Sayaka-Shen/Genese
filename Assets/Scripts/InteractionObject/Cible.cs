@@ -9,7 +9,7 @@ public class Cible : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
-            if (playerInteraction.IsPlayerPressingI)
+            if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 2)
             {
                 InteractioMenu.gameObject.SetActive(true);
                 InteractioMenu.GetComponent<TMP_Text>().text = "La cible encourage Le Bon....";

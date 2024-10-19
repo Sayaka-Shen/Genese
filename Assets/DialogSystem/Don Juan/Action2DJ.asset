@@ -40,10 +40,10 @@ MonoBehaviour:
   - Id: A2DJD4
     speekerName: 
     sentence: "Tu sais j'ai appris 2~3 truc chez les voleu-chevaliers, c'est que
-      ce Le Bon c'est le pr\xE9f\xE9r\xE9 de tout le monde. Si on lui rajoutais un
-      challenge, si il est vraiment si bon et que \xE7a si ont desserrait sa selle
-      pour lui rajouter du d\xE9fit \xE7a devrait \xEAtre int\xE9ressant. Enfin!
-      \xC7a n'est qu'une suggestion mi amigo."
+      ce La Brute c'est le plus fort de tout le monde. Si on lui rajoutais un challenge,
+      si il est vraiment si fort que \xE7a et si ont desserrait sa selle pour lui
+      rajouter du d\xE9fit \xE7a devrait \xEAtre int\xE9ressant. Enfin! \xC7a n'est
+      qu'une suggestion mi amigo."
     choices:
     - IDChoice: C_OK
       IDDialog: 

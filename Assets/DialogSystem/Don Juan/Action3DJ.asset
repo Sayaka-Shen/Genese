@@ -20,7 +20,7 @@ MonoBehaviour:
     - IDChoice: C_OK
       IDDialog: 
     - IDChoice: sabote
-      IDDialog: 
+      IDDialog: A3DJD2
   - Id: A3DJD2
     speekerName: 
     sentence: "Yo-ohoh~ Ne dites pas \xE7a malandrin! Il n\xE8 s'agit la qu\xE8 d'un
@@ -65,7 +65,9 @@ MonoBehaviour:
   - Id: A3DJD8
     speekerName: 
     sentence: A la victoire!
-    choices: []
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
   choiceDatas:
   - Id: continue
     label: "[\xC9couter]"

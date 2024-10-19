@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Meule : InteractableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
-    }
+        if (other.TryGetComponent(out PlayerInteraction playerInteraction))
+        {
+            if (playerInteraction.IsPlayerPressingI && playerInteraction.GetComponent<Inventory>().IsInventoryContaining("Epee") && CollisionNPC.iterationCount == 1)
+            {
+                InteractioMenu.gameObject.SetActive(true);
+                InteractioMenu.GetComponent<TMP_Text>().text = "L'Ecuyer polit l'épée...";
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+                StartCoroutine(WaitBeforeClosingInteractionMenu());
+
+                UnlockDialog();
+            }
+        }
     }
 }

@@ -12,10 +12,6 @@ public class CollisionNPC : MonoBehaviour
 
     public int iterationCount = 0;
 
-    /// <summary>
-    /// Merci Emile !!!!
-    /// </summary>
-    /// <param name="other">un truc là</param>
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.TryGetComponent(out PlayerInteraction playerInteraction))
