@@ -9,6 +9,7 @@ public class Meule : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
+            VisualCueI.gameObject.SetActive(true);
             if (playerInteraction.IsPlayerPressingI && playerInteraction.GetComponent<Inventory>().IsInventoryContaining("Epee") && CollisionNPC.iterationCount == 1 && !isInteractionMenuOpen)
             {
                 isInteractionMenuOpen = true;

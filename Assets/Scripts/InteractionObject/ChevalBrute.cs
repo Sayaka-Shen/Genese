@@ -9,6 +9,7 @@ public class ChevalBrute : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
+            VisualCueI.gameObject.SetActive(true);
             if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 2 && !isInteractionMenuOpen)
             {
                 isInteractionMenuOpen = true;

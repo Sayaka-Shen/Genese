@@ -6,16 +6,31 @@ using UnityEngine.UI;
 public class UISettingsController : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private Slider _musicSlider;
-    [SerializeField] private Slider _sfxSlider;
+    [SerializeField] private Slider musicSlider;
+    public Slider MusicSlider
+    {
+        get { return musicSlider; }
+    }
+
+    [SerializeField] private Slider sfxSlider;
+    public Slider SFXSlider
+    {
+        get { return sfxSlider; }
+    }
+
+    private void Start()
+    {
+        musicSlider.value = AudioManager.Instance.MusicSource.volume;
+        sfxSlider.value = AudioManager.Instance.SFXSource.volume;
+    }
 
     public void MusicVolume()
     {
-        AudioManager.Instance.MusicVolume(_musicSlider.value);
+        AudioManager.Instance.MusicVolume(musicSlider.value);
     }
 
     public void SFXVolume()
     {
-        AudioManager.Instance.SFXVolume(_sfxSlider.value);
+        AudioManager.Instance.SFXVolume(sfxSlider.value);
     }
 }

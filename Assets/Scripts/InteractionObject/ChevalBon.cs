@@ -9,6 +9,7 @@ public class ChevalBon : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
+            VisualCueI.gameObject.SetActive(true);
             if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 1 && !isInteractionMenuOpen)
             {
                 isInteractionMenuOpen = true;

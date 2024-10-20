@@ -9,6 +9,7 @@ public class CollisionNPC : MonoBehaviour
     [SerializeField] private DialogDatabase currentDialog;
     [SerializeField] private string idSentence;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject visualCueE;
 
     public int iterationCount = 0;
 
@@ -16,6 +17,8 @@ public class CollisionNPC : MonoBehaviour
     {
         if(other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
+            visualCueE.SetActive(true);
+
             if(playerInteraction.IsPlayerPressingE)
             {
                 canvas.gameObject.SetActive(true);
@@ -33,12 +36,9 @@ public class CollisionNPC : MonoBehaviour
         {
             playerInteraction.ResetInteractionStateE();
             playerInteraction.ResetInteractionStateI();
-        }
-    }
 
-    private void Update()
-    {
-        Debug.Log(iterationCount);
+            visualCueE?.SetActive(false);
+        }
     }
 
     public void SetNextDialog(DialogDatabase newDialog, string newIdSentence)

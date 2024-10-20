@@ -8,18 +8,27 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Parameters")]
     [SerializeField] private Sound[] musicSounds, sfxSounds;
     [SerializeField] private AudioSource musicSource, sfxSource;
+    public AudioSource MusicSource
+    {
+        get { return musicSource; }
+    }
+    public AudioSource SFXSource
+    {
+        get { return sfxSource; }
+    }
 
     private void Awake()
     {
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+
     }
 
     private void Start()
