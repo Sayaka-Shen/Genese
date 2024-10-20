@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A2LBonD1
-    speekerName: 
+    speekerName: Le Bon
     sentence: "*Un noble de la foule derri\xE8re vous:*\n*\"LE BON! LE BON!\"*"
     choices:
     - IDChoice: continue
-      IDDialog: 
+      IDDialog: A2LBonD2
   - Id: A2LBonD2
-    speekerName: 
+    speekerName: Le Bon
     sentence: "Ne payez pas attentions, ils m'acclament \xE0 cause des derniers tournois...
       Tr\xE8s franchement j'ai simplement gagn\xE9 le premier par une exclusion de
       mon adversaire \xE0 cause de la l\xE8pre, le second par un forfait d'un finaliste
@@ -32,7 +32,7 @@ MonoBehaviour:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A2LBonD3
-    speekerName: 
+    speekerName: Le Bon
     sentence: "Au final les seuls vraies amis \xE0 me comprendre son les OBJETS!\n*soupire*\nVous
       savez quoi, allez remercier le mannequin dans la cours."
     choices:

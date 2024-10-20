@@ -9,11 +9,12 @@ public class ChevalBon : InteractableObject
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
-            if (playerInteraction.IsPlayerPressingI)
+            if (playerInteraction.IsPlayerPressingI && CollisionNPC.iterationCount == 1 && !isInteractionMenuOpen)
             {
+                isInteractionMenuOpen = true;
                 InteractioMenu.gameObject.SetActive(true);
-                InteractioMenu.GetComponentInChildren<TMP_Text>().text = "L'Ecuyer caresse le cheval...";
-                
+                GameManager.Instance.StartTypeWriter("L'Ecuyer caresse le cheval...", InteractioMenu.GetComponentInChildren<TMP_Text>());
+                AudioManager.Instance.PlaySFX("Horse");
                 StartCoroutine(WaitBeforeClosingInteractionMenu());
 
                 UnlockDialog();

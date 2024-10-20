@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A2LBD1
-    speekerName: 
+    speekerName: La Brute
     sentence: '*Le chevalier semble droit et sobre tandis que celui-ci semble faire
       des mouvements dans l''air*'
     choices:
@@ -23,7 +23,7 @@ MonoBehaviour:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A2LBD2
-    speekerName: 
+    speekerName: La Brute
     sentence: Huf-Huf!
     choices:
     - IDChoice: C_OK
@@ -31,7 +31,7 @@ MonoBehaviour:
     - IDChoice: epee
       IDDialog: A2LBD3
   - Id: A2LBD3
-    speekerName: 
+    speekerName: La Brute
     sentence: "De cette \xE9p\xE9e, tr\xE9saillerons mes adversaires! Ah dinnae ken!
       Je ne connais ce Le bon. Peut m'importe s'il joute bien. D'ici la fin, votre
       path\xE9tique roi verra la grandeur \xE9cossaise! Vas chercher ma lance d\xE9sormais."

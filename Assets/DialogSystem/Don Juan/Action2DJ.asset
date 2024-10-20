@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A2DJD1
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: '*Le Don juan vous regardeles yeux remplis d''attente*'
     choices:
     - IDChoice: botte
@@ -22,7 +22,7 @@ MonoBehaviour:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A2DJD2
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Ahh! Enfin y\xE8 bien faillit attendre. Mes bottes sont bien appoint\xE9,
       sous-entendus ceux qui sont au bon endroit. Euh Non... En r\xE9sum\xE9 il faut
       \xEAtre temp\xE9r\xE9."
@@ -30,7 +30,7 @@ MonoBehaviour:
     - IDChoice: dalook
       IDDialog: A2DJD3
   - Id: A2DJD3
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Y\xE8 vois que tu contemples mon panache, ..., c'est bien normal qui
       ne contemplerais pas un chef d'\u0153uvre. \xC7a n'est pas le cas des chevaliers
       en revanche et le pire de tous c'est ce Le Bon!"
@@ -38,12 +38,12 @@ MonoBehaviour:
     - IDChoice: continue
       IDDialog: A2DJD4
   - Id: A2DJD4
-    speekerName: 
+    speekerName: Le Donjuan
     sentence: "Tu sais j'ai appris 2~3 truc chez les voleu-chevaliers, c'est que
-      ce Le Bon c'est le pr\xE9f\xE9r\xE9 de tout le monde. Si on lui rajoutais un
-      challenge, si il est vraiment si bon et que \xE7a si ont desserrait sa selle
-      pour lui rajouter du d\xE9fit \xE7a devrait \xEAtre int\xE9ressant. Enfin!
-      \xC7a n'est qu'une suggestion mi amigo."
+      ce La Brute c'est le plus fort de tout le monde. Si on lui rajoutais un challenge,
+      si il est vraiment si fort que \xE7a et si ont desserrait sa selle pour lui
+      rajouter du d\xE9fit \xE7a devrait \xEAtre int\xE9ressant. Enfin! \xC7a n'est
+      qu'une suggestion mi amigo."
     choices:
     - IDChoice: C_OK
       IDDialog: 

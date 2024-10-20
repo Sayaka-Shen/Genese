@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (DialogueController.Instance != null && DialogueController.Instance.isDialogOn)
+        if (DialogueController.Instance != null && DialogueController.Instance.IsDialogOn)
         {
             return;
         }

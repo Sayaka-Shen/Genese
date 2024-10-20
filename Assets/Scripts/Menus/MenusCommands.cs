@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenusCommands : MonoBehaviour
 {
@@ -37,5 +38,10 @@ public class MenusCommands : MonoBehaviour
     {
         settingsMenu.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

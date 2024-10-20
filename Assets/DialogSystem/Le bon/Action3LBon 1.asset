@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogDatas:
   - Id: A3LBonD1
-    speekerName: 
+    speekerName: Le Bon
     sentence: "*Un noble de la foule derri\xE8re vous:*\n*\"LE BON! LE BON!\"*"
     choices:
     - IDChoice: continue
       IDDialog: A3LBonD2
   - Id: A3LBonD2
-    speekerName: 
+    speekerName: Le Bon
     sentence: Mon bon roi 1er, puisse un jour ne jamais tomber en duel contre vous...
       Vous savez quoi? je pense que je vais abandonner par respect pour mes adversaires.
     choices:
@@ -29,13 +29,13 @@ MonoBehaviour:
     - IDChoice: beat
       IDDialog: A3LBonD2_2
   - Id: A3LBonD2_1
-    speekerName: 
+    speekerName: Le Bon
     sentence: Vous m'avez convaincus, je participerais!
     choices:
     - IDChoice: C_OK
       IDDialog: 
   - Id: A3LBonD2_2
-    speekerName: 
+    speekerName: Le Bon
     sentence: Je ne participerais donc qu'entant que spectateur.
     choices:
     - IDChoice: C_OK
