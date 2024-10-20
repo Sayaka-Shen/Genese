@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22a84082e438024b8703c49c5da3950, type: 3}
+  m_Name: Action1DJ
+  m_EditorClassIdentifier: 
+  dialogDatas:
+  - Id: A1DJD1
+    speekerName: Le Donjuan
+    sentence: "*Sirote le fond d'une coupe de vin en se parlant \xE0 lui m\xEAme*"
+    choices:
+    - IDChoice: continue
+      IDDialog: A1DJD2
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: A1DJD2
+    speekerName: Le Donjuan
+    sentence: "Sir Don Juan, champion de joute du pays. Sir Don Juan el h\xE9ro!
+      Par ma moustache ce titre m'ira bien"
+    choices:
+    - IDChoice: continue
+      IDDialog: A1DJD3
+    - IDChoice: C_OK
+      IDDialog: 
+  - Id: A1DJD3
+    speekerName: Le Donjuan
+    sentence: ...
+    choices:
+    - IDChoice: continue
+      IDDialog: A1DJD4
+  - Id: A1DJD4
+    speekerName: Le Donjuan
+    sentence: Mah tu es le scribe non?
+    choices:
+    - IDChoice: A1DJRep1
+      IDDialog: A1DJD5
+    - IDChoice: A1DJRep2
+      IDDialog: A1DJD5_2
+  - Id: A1DJD5
+    speekerName: Le Donjuan
+    sentence: "Dommage je t'aurais bien racont\xE9 comment j'ai pourfendu un dragon
+      \xE0 trois t\xEAte et demis. Tu dois \xEAtre l'\xE9cuyer alors, Bah y\xE8 des
+      bottes. Tu peux m\xED les apport\xE9es? Y'en ai besoin pour le duel. Y\xE8
+      ne marche pas dans la boue moi!"
+    choices:
+    - IDChoice: continue
+      IDDialog: A1DJD6
+  - Id: A1DJD5_2
+    speekerName: Le Donjuan
+    sentence: "\xC7a tombe bien! J'avais justement besoin de m\xE9mento mori... Pour
+      commencer MOI Don Juan! Il y a un mois un terrible ours serpent et remis ourse
+      derri\xE8re m'a... \r\n"
+    choices:
+    - IDChoice: enfin
+      IDDialog: A1DJD5
+  - Id: A1DJD6
+    speekerName: Le Donjuan
+    sentence: "Aussi fait atenci\xF3n, le cheval du rouge, il et couvert de bleus,
+      tu ferais bien d\xE9 le lib\xE9rer question d'\xEAtre concis... La petite voix
+      dans la t\xEAte qui dit d'\xEAtre gentil"
+    choices:
+    - IDChoice: C_OK
+      IDDialog: 
+  choiceDatas:
+  - Id: A1DJRep1
+    label: Non? Efin je crois...
+  - Id: A1DJRep2
+    label: Euh... Oui.
+  - Id: continue
+    label: "[\xC9couter]"
+  - Id: C_OK
+    label: '[Partir]'
+  - Id: enfin
+    label: "Mais enfin messire, la comp\xE9tition est pour bient\xF4t!"
