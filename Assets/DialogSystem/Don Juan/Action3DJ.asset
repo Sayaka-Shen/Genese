@@ -17,8 +17,6 @@ MonoBehaviour:
     speekerName: Le Donjuan
     sentence: Ah sous-fifre, c'est toi? Que veux-tu?
     choices:
-    - IDChoice: C_OK
-      IDDialog: Le Donjuan
     - IDChoice: sabote
       IDDialog: A3DJD2
   - Id: A3DJD2

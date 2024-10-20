@@ -177,6 +177,7 @@ MonoBehaviour:
   currentDialog: {fileID: 0}
   idSentence: 
   canvas: {fileID: 0}
+  iterationCount: 0
 --- !u!1 &9061955859952484214
 GameObject:
   m_ObjectHideFlags: 0
