@@ -38,7 +38,6 @@ public class Inventory : MonoBehaviour
                 AudioManager.Instance.PlaySFX("epee");
 
                 StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
-                
             }
 
             UIinventory.gameObject.SetActive(true);

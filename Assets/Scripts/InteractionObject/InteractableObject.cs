@@ -18,7 +18,6 @@ public class InteractableObject : MonoBehaviour
     [Header("UI Interaction")]
     [SerializeField] private Canvas interactionMenu;
     public bool isInteractionMenuOpen;
-
     public Canvas InteractioMenu
     {
         get { return interactionMenu; }
@@ -27,12 +26,22 @@ public class InteractableObject : MonoBehaviour
     private bool isUnlocked = false;
     public bool IsUnlocked { get { return isUnlocked; } }
 
+
+    [Header("VisualCue")]
+    [SerializeField] private GameObject visualCueI;
+    public GameObject VisualCueI
+    {
+        get { return visualCueI; }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.TryGetComponent(out PlayerInteraction playerInteraction))
         {
             playerInteraction.ResetInteractionStateE();
             playerInteraction.ResetInteractionStateI();
+
+            VisualCueI.gameObject.SetActive(false);
         }
     }
 
