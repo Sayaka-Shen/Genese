@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using UnityEditor.Search;
+using System.Net;
 
 public class Inventory : MonoBehaviour
 {
@@ -11,6 +10,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Canvas UIinventory;
     [SerializeField] private TMP_Text prefabText;
     [SerializeField] private GameObject panelParent;
+
+    private TMP_Text instanceTextBox;
 
     [SerializeField] private CollisionNPC collisionNPC;
     private InteractableObject interactableObject;
@@ -28,35 +29,56 @@ public class Inventory : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if(collision.gameObject.name == "Epee" && collisionNPC.iterationCount != 1 && interactableObject.isInteractionMenuOpen)
+                UIinventory.gameObject.SetActive(true);
+
+                inventoryList.Add(new GameObject(collision.gameObject.name));
+
+                if (panelParent.transform.childCount > 0 && panelParent.transform.GetChild(0) != null)
                 {
-                    return;
-                } 
+                    Destroy(panelParent.transform.GetChild(0).gameObject);
+
+                    instanceTextBox = Instantiate(prefabText);
+                    instanceTextBox.transform.SetParent(panelParent.transform);
+
+                    instanceTextBox.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+                    instanceTextBox.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+                    instanceTextBox.rectTransform.sizeDelta = new Vector2(200, 50);
+                    instanceTextBox.rectTransform.anchoredPosition = Vector2.zero;
+
+                    instanceTextBox.text = collision.gameObject.name;
+
+                    instanceTextBox.transform.SetAsLastSibling();
+                }
                 else
                 {
-                    interactableObject.isInteractionMenuOpen = true;
-                    interactableObject.InteractioMenu.gameObject.SetActive(true);
-                    GameManager.Instance.StartTypeWriter("L'Ecuyer récupère l'Epée...", interactableObject.InteractioMenu.GetComponentInChildren<TMP_Text>());
-                    AudioManager.Instance.PlaySFX("epee");
+                    instanceTextBox = Instantiate(prefabText);
+                    instanceTextBox.transform.SetParent(panelParent.transform);
 
-                    StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
+                    instanceTextBox.rectTransform.anchorMin = new Vector2(0.5f, 0.5f);  
+                    instanceTextBox.rectTransform.anchorMax = new Vector2(0.5f, 0.5f);  
+                    instanceTextBox.rectTransform.sizeDelta = new Vector2(200, 50); 
+                    instanceTextBox.rectTransform.anchoredPosition = Vector2.zero;
+
+                    instanceTextBox.text = collision.gameObject.name;
+
+                    instanceTextBox.transform.SetAsLastSibling();
                 }
 
-                UIinventory.gameObject.SetActive(true);
-                inventoryList.Add(collision.gameObject);
-
-                foreach (GameObject item in inventoryList)
-                {
-                    TMP_Text instancePrefabText = Instantiate(prefabText);
-                    instancePrefabText.transform.SetParent(panelParent.transform, false);
-                    instancePrefabText.SetText(item.name);
-                }
-
-                if (collision.gameObject != null)
-                {
-                    Destroy(collision.gameObject);
-                }
+                Destroy(collision.gameObject);
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (IsInventoryContaining("Epee") && collisionNPC.iterationCount == 1 && !interactableObject.isInteractionMenuOpen)
+        {
+            interactableObject.isInteractionMenuOpen = true;
+            interactableObject.InteractioMenu.gameObject.SetActive(true);
+            GameManager.Instance.StartTypeWriter("L'Ecuyer récupère l'Epée...", interactableObject.InteractioMenu.GetComponentInChildren<TMP_Text>());
+            AudioManager.Instance.PlaySFX("epee");
+
+            StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
         }
     }
 
@@ -64,7 +86,7 @@ public class Inventory : MonoBehaviour
     {
         foreach (GameObject item in inventoryList)
         {
-            if(item != null && item.name == name)
+            if (item != null && item.name == name)
             {
                 return true;
             }

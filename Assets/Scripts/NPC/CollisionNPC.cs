@@ -41,11 +41,6 @@ public class CollisionNPC : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Debug.Log(iterationCount);
-    }
-
     public void SetNextDialog(DialogDatabase newDialog, string newIdSentence)
     {
         currentDialog = newDialog;
