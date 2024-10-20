@@ -24,35 +24,38 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("TakeObject") && Input.GetMouseButtonDown(0))
+        if (collision.CompareTag("TakeObject"))
         {
-            if(collision.gameObject.name == "Epee" && collisionNPC.iterationCount != 1 && interactableObject.isInteractionMenuOpen)
+            if (Input.GetMouseButtonDown(0))
             {
-                return;
-            } 
-            else
-            {
-                interactableObject.isInteractionMenuOpen = true;
-                interactableObject.InteractioMenu.gameObject.SetActive(true);
-                GameManager.Instance.StartTypeWriter("L'Ecuyer récupère l'Epée...", interactableObject.InteractioMenu.GetComponentInChildren<TMP_Text>());
-                AudioManager.Instance.PlaySFX("epee");
+                if(collision.gameObject.name == "Epee" && collisionNPC.iterationCount != 1 && interactableObject.isInteractionMenuOpen)
+                {
+                    return;
+                } 
+                else
+                {
+                    interactableObject.isInteractionMenuOpen = true;
+                    interactableObject.InteractioMenu.gameObject.SetActive(true);
+                    GameManager.Instance.StartTypeWriter("L'Ecuyer récupère l'Epée...", interactableObject.InteractioMenu.GetComponentInChildren<TMP_Text>());
+                    AudioManager.Instance.PlaySFX("epee");
 
-                StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
-            }
+                    StartCoroutine(interactableObject.WaitBeforeClosingInteractionMenu());
+                }
 
-            UIinventory.gameObject.SetActive(true);
-            inventoryList.Add(collision.gameObject);
+                UIinventory.gameObject.SetActive(true);
+                inventoryList.Add(collision.gameObject);
 
-            foreach (GameObject item in inventoryList)
-            {
-                TMP_Text instancePrefabText = Instantiate(prefabText);
-                instancePrefabText.transform.SetParent(panelParent.transform, false);
-                instancePrefabText.SetText(item.name);
-            }
+                foreach (GameObject item in inventoryList)
+                {
+                    TMP_Text instancePrefabText = Instantiate(prefabText);
+                    instancePrefabText.transform.SetParent(panelParent.transform, false);
+                    instancePrefabText.SetText(item.name);
+                }
 
-            if (collision.gameObject != null)
-            {
-                Destroy(collision.gameObject);
+                if (collision.gameObject != null)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
     }

@@ -41,7 +41,7 @@ public class InteractableObject : MonoBehaviour
             playerInteraction.ResetInteractionStateE();
             playerInteraction.ResetInteractionStateI();
 
-            VisualCueI.gameObject.SetActive(false);
+            visualCueI.gameObject.SetActive(false);
         }
     }
 
